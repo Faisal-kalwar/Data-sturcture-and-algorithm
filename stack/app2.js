@@ -3,18 +3,23 @@ class Stack{
         this.items = [];
         this.size = 5;
     }
+    // add element to top of stac
     push(item){
         this.items.push(item);
         this.size++;
     }
+
+    //remove top element in stack
     pop(){
         this.items.pop();
         this.size--;
         
     }
+    // print last element of array
     peek(){
         console.log(this.items[this.items.length-1]);
     }
+    //check if the stack is empty 
     isEmpty(){
         if(this.items.length == 0){
             return true;
@@ -23,6 +28,7 @@ class Stack{
             return false;
         }
     }
+    
     isFull(){
         return this.items.length = this.size;
     }
@@ -48,8 +54,6 @@ let myStack = new Stack();
 // myStack.peek();
 // myStack.printStack();
 
-myStack.isEmpty();
-myStack.printStack();
+// myStack.isEmpty();
 
-// myStack.isFull();
-// myStack.printStack();
+myStack.isFull();
